@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.tab {
+  height: 100%;
+  flex: 1;
+  transition: flex 200ms linear;
+}
+
+.tab:hover {
+  flex: 1.5;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.bottom.collapse {
+  pointer-events: none;
+}
+
+.bottom.collapse .shrinky {
+  transform: translateY(100%);
+}
+
+.shrinky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  transition: transform 200ms linear;
+}
+
+.x {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 100px;
+  color: white;
+  cursor: s-resize;
+  user-select: none;
+}
